@@ -1,0 +1,30 @@
+{
+    // C/C++ Flylint settings
+    "c-cpp-flylint.cppcheck.extraArgs": [
+        "--std=c++23",
+        "--suppress=normalCheckLevelMaxBranches"
+    ],
+    "c-cpp-flylint.clang.enable": false,
+    "c-cpp-flylint.cppcheck.enable": true,
+
+    // Code Runner settings for C++
+    "code-runner.runInTerminal": true,
+    "code-runner.executorMap": {
+        // "cpp": "$d = pwd ; cd $dir; if (!(Test-Path \"$d\\bin\")) { mkdir \"$d\\bin\" }; g++ \"$fileName\" -o \"$d\\bin\\$fileNameWithoutExt.exe\"; & \"$d\\bin\\$fileNameWithoutExt.exe\"; cd $d"
+        /* powershellのコマンドを外部化 */
+        "cpp": "powershell -ExecutionPolicy Bypass -File \"run_cpp.ps1\""   /* 引数$fileはcode runnerが自動で渡す */
+    },
+    "github.copilot.enable": {
+        "*": true,
+        "cpp": false,
+    },
+
+    // Coverage tools (e.g., Coverage Gutters)
+    "coverage-gutters.coverageFileNames": [
+        "build/coverage.info"
+    ],
+
+    // Python settings
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
+    "python.terminal.activateEnvironment": true,
+}
