@@ -4,6 +4,9 @@
             "name": "Win64",
             "includePath": [
                 "${workspaceFolder}/**",
+                "${workspaceFolder}/inc/**",
+                "${workspaceFolder}/inc/bits/**",
+                "${workspaceFolder}/inc/my_lib/**",
                 "C:/Program Files (x86)/mingw64/bin"
             ],
             "defines": [
