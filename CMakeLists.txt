@@ -5,7 +5,7 @@
 # 4.) cmake --build .   
 # 5.) ./Excecutable
 
-cmake_minimum_required(VERSION 3.22)
+cmake_minimum_required(VERSION 3.5)
 
 project(
     CMakeTests
@@ -24,6 +24,47 @@ option(COMPILE_EXECUTABLE "Whether to compile the executable" ON)
 
 set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/")
 include(AddGitSubmodule)
+include(FetchContent)
+
+FetchContent_Declare(
+    nlohmann_json
+    GIT_REPOSITORY https://github.com/nlohmann/json
+    GIT_TAG v3.12.0
+    GIT_SHALLOW TRUE
+)
+FetchContent_MakeAvailable(nlohmann_json)
+
+FetchContent_Declare(
+    fmt
+    GIT_REPOSITORY https://github.com/fmtlib/fmt
+    GIT_TAG 12.1.0
+    GIT_SHALLOW TRUE
+)
+FetchContent_MakeAvailable(fmt)
+
+FetchContent_Declare(
+    spdlog
+    GIT_REPOSITORY https://github.com/gabime/spdlog
+    GIT_TAG v1.17.0
+    GIT_SHALLOW TRUE
+)
+FetchContent_MakeAvailable(spdlog)
+
+FetchContent_Declare(
+    cxxopts
+    GIT_REPOSITORY https://github.com/jarro2783/cxxopts
+    GIT_TAG v3.3.1
+    GIT_SHALLOW TRUE
+)
+FetchContent_MakeAvailable(cxxopts)
+
+FetchContent_Declare(
+    Catch2
+    GIT_REPOSITORY https://github.com/catchorg/Catch2
+    GIT_TAG v2.13.9
+    GIT_SHALLOW TRUE
+)
+FetchContent_MakeAvailable(Catch2)
 
 add_git_submodule(external/json)
 

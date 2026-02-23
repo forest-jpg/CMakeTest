@@ -8,6 +8,9 @@ function(add_git_submodule dir)
     endif()
 
     if (EXISTS ${dir}/CMakeLists.txt)   # Only add subdirectory if Git submodule is a CMake project
+        message("Adding: ${dir}/CMakeLists.txt")
         add_subdirectory(${dir})
+    else()
+        message("Could not add: ${dir}/CMakeLists.txt")
     endif()    
 endfunction(add_git_submodule)
