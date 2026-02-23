@@ -13,5 +13,18 @@ project(
     LANGUAGES C CXX
 )
 
+set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS ON)
+
+set(LIBRARY_NAME Library)
+set(EXECUTABLE_NAME Executable)
+
+option(COMPILE_EXECUTABLE "Whether to compile the executable" ON)
+
 add_subdirectory(app)
-add_subdirectory(src)
+if (COMPILE_EXECUTABLE)
+    add_subdirectory(src)
+else()
+    message("W/o exe. compiling")
+endif()

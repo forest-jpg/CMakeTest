@@ -1,0 +1,41 @@
+{
+  "version": 5,
+  "configurePresets": [
+    {
+      "name": "mingw-debug",
+      "displayName": "MinGW Debug",
+      "generator": "MinGW Makefiles",
+      "binaryDir": "${sourceDir}/build/mingw-debug",
+      "cacheVariables": {
+        "CMAKE_C_COMPILER": "C:/Program Files (x86)/mingw64/bin/gcc.exe",
+        "CMAKE_CXX_COMPILER": "C:/Program Files (x86)/mingw64/bin/g++.exe",
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_CXX_FLAGS_DEBUG": "-g -O0 -Wall -Wextra -Wpedantic"
+      }
+    },
+    {
+      "name": "mingw-release",
+      "displayName": "MinGW Release",
+      "generator": "MinGW Makefiles",
+      "binaryDir": "${sourceDir}/build/mingw-release",
+      "cacheVariables": {
+        "CMAKE_C_COMPILER": "C:/Program Files (x86)/mingw64/bin/gcc.exe",
+        "CMAKE_CXX_COMPILER": "C:/Program Files (x86)/mingw64/bin/g++.exe",
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_CXX_FLAGS_RELEASE": "-O2 -Wall -Wextra -Wpedantic"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "mingw-debug",
+      "configurePreset": "mingw-debug",
+      "jobs": 8
+    },
+    {
+      "name": "mingw-release",
+      "configurePreset": "mingw-release",
+      "jobs": 8
+    }
+  ]
+}
