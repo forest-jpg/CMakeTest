@@ -6,7 +6,7 @@
                 "${workspaceFolder}/**",
                 "${workspaceFolder}/inc/**",
                 "${workspaceFolder}/inc/bits/**",
-                "${workspaceFolder}/inc/my_lib/**",
+                "${workspaceFolder}/src/my_lib/**",
                 "C:/Program Files (x86)/mingw64/bin"
             ],
             "defines": [

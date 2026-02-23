@@ -22,6 +22,13 @@ set(EXECUTABLE_NAME Executable)
 
 option(COMPILE_EXECUTABLE "Whether to compile the executable" ON)
 
+set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/")
+include(AddGitSubmodule)
+
+add_git_submodule(external/json)
+
+add_subdirectory(configured)
+add_subdirectory(external)
 add_subdirectory(src)
 if (COMPILE_EXECUTABLE)
     add_subdirectory(app)
