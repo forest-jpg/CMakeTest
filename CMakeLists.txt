@@ -22,9 +22,9 @@ set(EXECUTABLE_NAME Executable)
 
 option(COMPILE_EXECUTABLE "Whether to compile the executable" ON)
 
-add_subdirectory(app)
+add_subdirectory(src)
 if (COMPILE_EXECUTABLE)
-    add_subdirectory(src)
+    add_subdirectory(app)
 else()
     message("W/o exe. compiling")
 endif()
