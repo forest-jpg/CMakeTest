@@ -1,7 +1,11 @@
 # CMakeTest
 
-このワークスペースは、**CMake の使い方を学習するためのサンプルプロジェクト**です。  
+このワークスペースは、**CMake の使い方を学習するための個人用プロジェクト**です。  
 C++アプリとライブラリを分離し、依存ライブラリ管理・ビルド設定・ターゲットリンクの流れを実践できます。
+
+> このプロジェクトはUdemyの「CMake, Tests and Tooling for C/C++ Projects [2024 Edition]
+」コースをもとに作成しました。（講師：Jan Schaffranek氏）
+URL：[CMake, Tests and Tooling for C/C++ Projects [2024 Edition]](https://www.udemy.com/share/106hD83@VprEi_p4As3Mxap4-MZmj771c25qymm4kjD-IYygeBXjZY0GulxA22q5DVkC2URapg==/)
 
 ---
 
